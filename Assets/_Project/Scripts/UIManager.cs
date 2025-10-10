@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] private PlayerController m_Player;
     [SerializeField] private RectTransform m_PopupWindow;
+    [SerializeField] private ActionManager m_ActionManager;
 
     [SerializeField] private float m_PoppedPosition;
     [SerializeField] private float m_HiddenPosition;
@@ -28,5 +30,11 @@ public class UIManager : MonoBehaviour
     {
         m_IsPopped = false;
         m_PopupWindow.anchoredPosition = new Vector2(m_PopupWindow.anchoredPosition.x, m_HiddenPosition);
+    }
+
+    public void OnPlayClicked()
+    {
+        m_Player.OnGamePlayStart();
+        HidePopup();
     }
 }
