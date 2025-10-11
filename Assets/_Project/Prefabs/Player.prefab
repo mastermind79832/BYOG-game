@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1266288313068684758}
   - component: {fileID: 326367144169289661}
   - component: {fileID: 4112037420146739326}
+  - component: {fileID: 1480225295827369076}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.11, y: -0.54, z: 0}
-  m_LocalScale: {x: 7772292, y: 7772292, z: 7772292}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,11 +79,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1775218745
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 240333560332033832, guid: 411a59ce7ee20ce4591b0b9cc9809577, type: 3}
-  m_Color: {r: 0.33214888, g: 0.46226418, b: 0.32489324, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -155,4 +156,24 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &1480225295827369076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5980837382317360635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7236a2999f672a4499c1fe06c2e05411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  m_ActionManager: {fileID: 0}
+  m_MoveSpeed: 4
+  m_JumpForce: 7
+  m_Rigidbody: {fileID: 4112037420146739326}
+  m_InteractionRange: 10
+  m_InteractiveLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
