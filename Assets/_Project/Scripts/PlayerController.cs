@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -109,7 +107,6 @@ public class PlayerController : MonoBehaviour
         {
             m_IsJumping = false;
             m_Anim.SetBool("IsGrounded", true);
-
         }
     }
 

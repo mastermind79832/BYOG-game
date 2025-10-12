@@ -127,9 +127,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 316719609006486318, guid: 8bba314fb003ef8429bd10d4e66033c7, type: 3}
+      propertyPath: m_Size.x
+      value: 15.110382
+      objectReference: {fileID: 0}
     - target: {fileID: 4830682639882727913, guid: 8bba314fb003ef8429bd10d4e66033c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5712
+      value: 0.5935
       objectReference: {fileID: 0}
     - target: {fileID: 4830682639882727913, guid: 8bba314fb003ef8429bd10d4e66033c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1288,6 +1292,14 @@ PrefabInstance:
     - target: {fileID: 7818809270464061026, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043372844575959590, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
+      propertyPath: m_InteractionRange
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043372844575959590, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
+      propertyPath: m_GroundCheckDistance
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8255623283160609329, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
       propertyPath: m_AnchorMax.y
