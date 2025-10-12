@@ -46,15 +46,12 @@ public class AudioManager : MonoBehaviour
         UISource.Play();
     }
     
-    public void PlayBeatTune(int index, float pitch)
+    public void PlayBeatTune(AudioClip beatTune, float pitch)
     {
-        if (BeatboxTunes != null && BeatboxTunes.Count > 0 && index >= 0 && index < BeatboxTunes.Count)
-        {
-            UISource.clip = BeatboxTunes[index];
-            UISource.pitch = pitch;
-            UISource.loop = false;
-            UISource.Play();
-        }
-        
+        UISource.Stop();
+        UISource.clip = beatTune;
+        UISource.pitch = pitch;
+        UISource.loop = false;
+    
     }
 }

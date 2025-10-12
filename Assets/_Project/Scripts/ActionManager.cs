@@ -8,7 +8,7 @@ public struct ActionState
     public ActionTypeEnum type;
     public bool isActive;
 
-    public int BeatIndex;
+    public AudioClip BeatIndex;
     public float Pitch;
 }
 
@@ -36,13 +36,13 @@ public class ActionManager : MonoBehaviour
         int index = 0;
         for (int i = 0; i < actionTimelineControllers.Length; i++)
         {
+            actionTimelineControllers[i].OnActionReset();
             if (beatTunes != null && beatTunes.Count > 0)
             {
                 index = UnityEngine.Random.Range(0, beatTunes.Count);
+                actionTimelineControllers[i].BeatIndex = beatTunes[index];
                 beatTunes.RemoveAt(index);
             }         
-            actionTimelineControllers[i].OnActionReset();
-            actionTimelineControllers[i].BeatIndex = index;
         }
     }
 }

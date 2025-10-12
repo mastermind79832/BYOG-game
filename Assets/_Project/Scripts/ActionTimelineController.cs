@@ -9,9 +9,9 @@ public class ActionTimelineController : MonoBehaviour
     [SerializeField] private ActionTypeEnum m_ActionType;
     public ActionTypeEnum ActionType => m_ActionType;
 
-    public int BeatIndex;
+    public AudioClip BeatIndex;
 
-    void Start()
+    void Awake()
     {
         foreach (Toggle toggle in m_ActionSequence)
         {

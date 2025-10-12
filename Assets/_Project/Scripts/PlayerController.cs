@@ -121,6 +121,7 @@ public class PlayerController : MonoBehaviour
         m_IsGamePlaying = false;
         m_IsMovingLeft = false;
         m_IsMovingRight = false;
+        HandleMovement();
         GameManager.Instance.UIManagerRef.OnTimeUpdated(0f);
         StartCoroutine(WaitForEndStuff());
     }

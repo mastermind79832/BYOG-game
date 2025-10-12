@@ -731,10 +731,16 @@ MonoBehaviour:
   PlayerSource: {fileID: 3012147680747990352}
   UISource: {fileID: 6211611871112866943}
   EffectSource: {fileID: 4174762956060315139}
-  BeatboxTunes: []
+  BeatboxTunes:
+  - {fileID: 8300000, guid: 7f1691eed118d604d876a764d1188dcd, type: 3}
+  - {fileID: 8300000, guid: 74f2be5b08de4b245900b674a88c4ac1, type: 3}
+  - {fileID: 8300000, guid: e0803b8479e5b9d419c86f37127bde7d, type: 3}
+  - {fileID: 8300000, guid: cddcf7eecf73c5746be87678edfc7ca2, type: 3}
+  - {fileID: 8300000, guid: 1ea7f4048ba5d264c8c1ead9f3600266, type: 3}
+  - {fileID: 8300000, guid: 1577b7031f9357f4f8fde6cfe6b7990c, type: 3}
   ButtonClick: {fileID: 0}
-  PlayerWalk: {fileID: 0}
-  PlayerJump: {fileID: 0}
+  PlayerWalk: {fileID: 8300000, guid: 26862b7f530934243b8c71939e4c08ce, type: 3}
+  PlayerJump: {fileID: 8300000, guid: 9eb5b1d32aafd9a4ea9b83ecc7cb7b87, type: 3}
 --- !u!1 &779505080963581465
 GameObject:
   m_ObjectHideFlags: 0
@@ -3584,7 +3590,7 @@ MonoBehaviour:
   - {fileID: 2369079296351596128}
   - {fileID: 5259447896421950560}
   m_ActionType: 3
-  BeatIndex: 0
+  BeatIndex: {fileID: 0}
 --- !u!1 &3353111369277766313
 GameObject:
   m_ObjectHideFlags: 0
@@ -4484,7 +4490,7 @@ MonoBehaviour:
   - {fileID: 7694451918693241699}
   - {fileID: 8208405225043517789}
   m_ActionType: 0
-  BeatIndex: 0
+  BeatIndex: {fileID: 0}
 --- !u!1 &4105556123728348823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4542,7 +4548,7 @@ MonoBehaviour:
   - {fileID: 2968949410669201978}
   - {fileID: 620169939752738365}
   m_ActionType: 2
-  BeatIndex: 0
+  BeatIndex: {fileID: 0}
 --- !u!1 &4177741216005088898
 GameObject:
   m_ObjectHideFlags: 0
@@ -7396,7 +7402,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8154,7 +8160,7 @@ MonoBehaviour:
   - {fileID: 7511610418394701445}
   - {fileID: 7228282643184096391}
   m_ActionType: 1
-  BeatIndex: 0
+  BeatIndex: {fileID: 0}
 --- !u!1 &8242405379595416931
 GameObject:
   m_ObjectHideFlags: 0
@@ -8434,11 +8440,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: e948f805e8ff7b84994c47e24ac56dcd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 0.54
-  Loop: 0
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -9403,7 +9409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2623536204213195201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9497,12 +9503,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8593687667496238587}
     - target: {fileID: 1480225295827369076, guid: 76f06b1935af09949a66371bba982179, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480225295827369076, guid: 76f06b1935af09949a66371bba982179, type: 3}
       propertyPath: m_ActionManager
       value: 
       objectReference: {fileID: 5417426856519402770}
     - target: {fileID: 1480225295827369076, guid: 76f06b1935af09949a66371bba982179, type: 3}
       propertyPath: m_InteractionRange
-      value: 1.01
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1480225295827369076, guid: 76f06b1935af09949a66371bba982179, type: 3}
       propertyPath: m_GroundLayer.m_Bits
@@ -9510,11 +9520,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1480225295827369076, guid: 76f06b1935af09949a66371bba982179, type: 3}
       propertyPath: m_GroundCheckDistance
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5905863702843698795, guid: 76f06b1935af09949a66371bba982179, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.02
+      value: -7.36
       objectReference: {fileID: 0}
     - target: {fileID: 5905863702843698795, guid: 76f06b1935af09949a66371bba982179, type: 3}
       propertyPath: m_LocalPosition.y
