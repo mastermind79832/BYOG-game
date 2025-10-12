@@ -3584,6 +3584,7 @@ MonoBehaviour:
   - {fileID: 2369079296351596128}
   - {fileID: 5259447896421950560}
   m_ActionType: 3
+  BeatIndex: 0
 --- !u!1 &3353111369277766313
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,6 +4484,7 @@ MonoBehaviour:
   - {fileID: 7694451918693241699}
   - {fileID: 8208405225043517789}
   m_ActionType: 0
+  BeatIndex: 0
 --- !u!1 &4105556123728348823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4540,6 +4542,7 @@ MonoBehaviour:
   - {fileID: 2968949410669201978}
   - {fileID: 620169939752738365}
   m_ActionType: 2
+  BeatIndex: 0
 --- !u!1 &4177741216005088898
 GameObject:
   m_ObjectHideFlags: 0
@@ -8151,6 +8154,7 @@ MonoBehaviour:
   - {fileID: 7511610418394701445}
   - {fileID: 7228282643184096391}
   m_ActionType: 1
+  BeatIndex: 0
 --- !u!1 &8242405379595416931
 GameObject:
   m_ObjectHideFlags: 0
@@ -8433,7 +8437,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.54
   Loop: 0
   Mute: 0
   Spatialize: 0
