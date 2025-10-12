@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +17,19 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Slider m_TimerSlider;
     private bool m_IsPopped = false;
 
+    [SerializeField] private GameObject GameOverPanel;
+    [SerializeField] private GameObject NextLevelButton;
+    [SerializeField] private TextMeshProUGUI GameOverText;
+
+    void Start()
+    {
+        OnClearClicked();
+        HidePopup();
+        GameOverPanel.SetActive(false);
+    }
     public void PopUpToggle()
     {
-        if(m_IsPopped)
+        if (m_IsPopped)
             HidePopup();
         else
             PopUp();
@@ -44,7 +56,8 @@ public class UIManager : MonoBehaviour
 
     public void OnClearClicked()
     {
-        m_ActionManager.OnActionReset();
+        List<AudioClip> clip = new List<AudioClip>(GameManager.Instance.AudioManagerRef.BeatboxTunes);
+        m_ActionManager.OnActionReset(clip);
     }
 
     private void LockUI()
@@ -66,5 +79,20 @@ public class UIManager : MonoBehaviour
     public void OnTimeUpdated(float time)
     {
         m_TimerSlider.value = time;
+    }
+
+    public void GameOver(bool isWin)
+    {
+        if (isWin)
+        {
+            GameOverText.text = "You Win!";
+            NextLevelButton.SetActive(true);
+        }
+        else
+        {
+            GameOverText.text = "Game Over!";
+            NextLevelButton.SetActive(false);
+        }
+        GameOverPanel.SetActive(true);
     }
 }

@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ActionManager m_ActionManager;
     [SerializeField] private float m_MoveSpeed = 5f;
     [SerializeField] private float m_JumpForce = 10f;
+    [SerializeField] private float m_GroundCheckDistance;
+    [SerializeField] private LayerMask m_GroundLayer;
     [SerializeField] private Rigidbody2D m_Rigidbody;
-
 
     [Header("Interactions")]
     [SerializeField] private float m_InteractionRange = 2f;
@@ -26,9 +27,22 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 m_StartLocation;
 
+    [SerializeField] private Animator m_Anim;
+    private bool m_IsJumping;
+    private bool m_IsGrounded;
+
+    private float m_GroundCheckDelayTimer;
+
+    private bool m_IsGameOver;
+  
     void Start()
     {
         m_StartLocation = transform.position;
+        m_Anim.SetBool("IsRunning", false); // Set the initial animation state
+        m_Anim.SetFloat("Falling", 0);
+        m_Anim.ResetTrigger("Jump");
+        m_Anim.SetBool("IsGrounded", true);
+        m_IsGameOver = false;
     }
 
     public void OnGamePlayStart()
@@ -36,9 +50,15 @@ public class PlayerController : MonoBehaviour
         m_IsGamePlaying = true;
         m_Timer = m_TimeInterval / 2;
         m_CurrentTimeIndex = 0;
+        transform.localScale = Vector3.one; // Reset scale to normal size
     }
     private void Update()
     {
+        
+        if(m_IsGameOver) return;
+
+        HandleJumpAnimations();
+
         if (!m_IsGamePlaying) return;
 
         UpdateTimer();
@@ -63,6 +83,34 @@ public class PlayerController : MonoBehaviour
         }
 
         HandleMovement();
+    }
+
+    private void HandleJumpAnimations()
+    {
+        if (m_IsJumping)
+        {
+            m_Anim.SetFloat("Falling", m_Rigidbody.linearVelocityY > 0 ? 0: 1);
+            GroundCheck();
+        }
+    }
+
+    private void GroundCheck()
+    {
+        // delay for ground check
+        if (m_Timer >= m_GroundCheckDelayTimer + 0.1f)
+        {
+            m_GroundCheckDelayTimer = 0;
+        }
+        else
+        {
+            return;
+        }
+        if (Physics2D.Raycast(transform.position, Vector2.down, m_GroundCheckDistance, m_GroundLayer))
+        {
+            m_IsJumping = false;
+            m_Anim.SetBool("IsGrounded", true);
+
+        }
     }
 
     private void UpdateTimer()
@@ -91,12 +139,22 @@ public class PlayerController : MonoBehaviour
     {
         if (m_IsMovingLeft)
         {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
             transform.Translate(Vector3.left * m_MoveSpeed * Time.deltaTime, Space.World);
+            m_Anim.SetBool("IsRunning", true);
+            GameManager.Instance.AudioManagerRef.PlayPlayerWalk(true);
         }
-        
-        if(m_IsMovingRight)
+        else if (m_IsMovingRight)
         {
+            transform.localScale = new Vector3(1f, 1f, 1f);
             transform.Translate(Vector3.right * m_MoveSpeed * Time.deltaTime, Space.World);
+            m_Anim.SetBool("IsRunning", true);
+            GameManager.Instance.AudioManagerRef.PlayPlayerWalk(true);
+        }
+        else
+        {
+            m_Anim.SetBool("IsRunning", false);
+            GameManager.Instance.AudioManagerRef.PlayPlayerWalk(false);
         }
     }
 
@@ -116,15 +174,17 @@ public class PlayerController : MonoBehaviour
                 m_IsMovingRight = actionState.isActive;
                 break;
             case ActionTypeEnum.Jump:
-                if(actionState.isActive) Jump();
+                if (actionState.isActive) Jump();
                 break;
             case ActionTypeEnum.Interact:
-                if(actionState.isActive) Interact();
+                if (actionState.isActive) Interact();
                 break;
         }
+
+        GameManager.Instance.AudioManagerRef.PlayBeatTune(actionState.BeatIndex, actionState.Pitch);
     }
 
-       private void Interact()
+    private void Interact()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, m_InteractionRange, transform.up, 0f, m_InteractiveLayerMask);
         if (hits.Length == 0)
@@ -138,6 +198,37 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         m_Rigidbody.linearVelocityY = m_JumpForce;
+        m_IsJumping = true;
+        m_Anim.SetTrigger("Jump");
+        m_Anim.SetBool("IsGrounded", false);
+        m_GroundCheckDelayTimer = m_Timer;
+        GameManager.Instance.AudioManagerRef.PlayPlayerJump();
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Door"))
+        {
+            if (GameManager.Instance.IsKeyCollected)
+            {
+                GameManager.Instance.GameWin();
+                m_IsGameOver = true;
+            }
+        }
+
+        if (other.CompareTag("Spike"))
+        {
+            GameManager.Instance.GameOver();
+            m_IsGameOver = true;
+        }
+
+    }
+    
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue; // Set the color of the gizmo
+        Gizmos.DrawWireSphere(transform.position, m_InteractionRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)(Vector2.down * m_GroundCheckDistance));
+    }
 }

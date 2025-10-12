@@ -1,19 +1,23 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager m_Instance;
     public static GameManager Instance { get { return m_Instance; } }
 
-
     [SerializeField] private PlayerController m_PlayerControllerRef;
     public PlayerController PlayerControllerRef { get { return m_PlayerControllerRef; } }
     [SerializeField] private UIManager m_UiManagerRef;
     public UIManager UIManagerRef { get { return m_UiManagerRef; } }
 
-    private bool IsKeyCollected;
-    
+    private bool m_IsKeyCollected;
+    public bool IsKeyCollected { get { return m_IsKeyCollected; } }
+
+    [SerializeField] private AudioManager m_AudioManagerRef;
+    public AudioManager AudioManagerRef { get { return m_AudioManagerRef; } }
 
     void Awake()
     {
@@ -41,7 +45,27 @@ public class GameManager : MonoBehaviour
 
     internal void KeyCollected()
     {
-        IsKeyCollected = true;
+        m_IsKeyCollected = true;
         Debug.Log("Key Collected");
+    }
+
+    internal void GameWin()
+    {
+        m_UiManagerRef.GameOver(true);
+    }
+
+    internal void GameOver()
+    {
+        m_UiManagerRef.GameOver(false);
+    }
+
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
