@@ -6,8 +6,7 @@
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
+[Ww]indowsBuild/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
@@ -58,7 +57,6 @@ ExportedObj/
 sysinfo.txt
 
 # Builds
-*.apk
 *.aab
 *.unitypackage
 *.unitypackage.meta
