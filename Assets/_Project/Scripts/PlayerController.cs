@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private GuideSystem m_GuideSystem; // Reference to the GuideSystem script
     [SerializeField] private ActionManager m_ActionManager;
     [SerializeField] private float m_MoveSpeed = 5f;
     [SerializeField] private float m_JumpForce = 10f;
@@ -135,6 +136,8 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
+
+        m_MoveSpeed = m_GuideSystem.Offset;
         if (m_IsMovingLeft)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
