@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioManager m_AudioManagerRef;
     public AudioManager AudioManagerRef { get { return m_AudioManagerRef; } }
 
+    [SerializeField] private DoorHandler m_DoorHandlerRef;
+
 
     void Awake()
     {
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        UIManagerRef.gameObject.SetActive(true);
     }
 
     public void OnPlayClicked()
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
     internal void KeyCollected()
     {
         m_IsKeyCollected = true;
+        m_DoorHandlerRef.OpenDoor();
         Debug.Log("Key Collected");
     }
 

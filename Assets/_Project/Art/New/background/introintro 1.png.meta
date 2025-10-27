@@ -1,10 +1,61 @@
 fileFormatVersion: 2
-guid: a936d4abb1b2ea84fad271522ea90bea
+guid: 33f3746d5e6617a4ebdfb85f7d819d92
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6695950386315148514
-    second: BG_0
+      213: -6134994993148113631
+    second: introintro 1_0
+  - first:
+      213: -6116712551312311523
+    second: introintro 1_1
+  - first:
+      213: 586125280462456451
+    second: introintro 1_2
+  - first:
+      213: -393575491422128820
+    second: introintro 1_3
+  - first:
+      213: -8337254683201727460
+    second: introintro 1_4
+  - first:
+      213: 7758967716085098599
+    second: introintro 1_5
+  - first:
+      213: -6585747459660819067
+    second: introintro 1_6
+  - first:
+      213: 6478317298445700783
+    second: introintro 1_7
+  - first:
+      213: -799425458384695885
+    second: introintro 1_8
+  - first:
+      213: -2605650805062436541
+    second: introintro 1_9
+  - first:
+      213: 3118206952541981990
+    second: introintro 1_10
+  - first:
+      213: -8132414829003868529
+    second: introintro 1_11
+  - first:
+      213: -3681472610620002330
+    second: introintro 1_12
+  - first:
+      213: -3453399767439882068
+    second: introintro 1_13
+  - first:
+      213: -3274625475163930559
+    second: introintro 1_14
+  - first:
+      213: 6052117322955262939
+    second: introintro 1_15
+  - first:
+      213: -6486908947590639225
+    second: introintro 1_16
+  - first:
+      213: -3268626877330328488
+    second: introintro 1_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,22 +88,22 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 117, y: 122, z: 225, w: 111}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -139,13 +190,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG_0
+      name: introintro 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1710
-        height: 1014
+        x: 374
+        y: 192
+        width: 1173
+        height: 740
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e13cb0ea9943313a0800000000000000
-      internalID: -6695950386315148514
+      spriteID: 12d4b9eee8e1cdaa0800000000000000
+      internalID: -6134994993148113631
       vertices: []
       indices: 
       edges: []
@@ -164,8 +215,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 111d5a834652dac449d74999f1f58fc2
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -174,7 +225,25 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BG_0: -6695950386315148514
+      introintro 1_0: -6134994993148113631
+      introintro 1_1: -6116712551312311523
+      introintro 1_10: 3118206952541981990
+      introintro 1_11: -8132414829003868529
+      introintro 1_12: -3681472610620002330
+      introintro 1_13: -3453399767439882068
+      introintro 1_14: -3274625475163930559
+      introintro 1_15: 6052117322955262939
+      introintro 1_16: -6486908947590639225
+      introintro 1_17: -3268626877330328488
+      introintro 1_18: 1428982308
+      introintro 1_2: 586125280462456451
+      introintro 1_3: -393575491422128820
+      introintro 1_4: -8337254683201727460
+      introintro 1_5: 7758967716085098599
+      introintro 1_6: -6585747459660819067
+      introintro 1_7: 6478317298445700783
+      introintro 1_8: -799425458384695885
+      introintro 1_9: -2605650805062436541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
