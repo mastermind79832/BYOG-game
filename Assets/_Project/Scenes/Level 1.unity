@@ -927,7 +927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2794418481069958528, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
       propertyPath: LineStartX
-      value: -6.69
+      value: -7.89
       objectReference: {fileID: 0}
     - target: {fileID: 3089691805133862969, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1465,6 +1465,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1591192155170534749, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1644628415546839401, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2001,14 +2005,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8043372844575959590, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
-      propertyPath: m_InteractionRange
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8043372844575959590, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
-      propertyPath: m_GroundCheckDistance
-      value: 0.9
-      objectReference: {fileID: 0}
     - target: {fileID: 8255623283160609329, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2083,7 +2079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9178040187142902021, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

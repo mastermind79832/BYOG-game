@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
             Destroy(this);
     }
 
+    void Start()
+    {
+        
+    }
+
     public void OnPlayClicked()
     {
         PlayerControllerRef.OnGamePlayStart();

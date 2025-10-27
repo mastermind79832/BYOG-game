@@ -169,11 +169,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7236a2999f672a4499c1fe06c2e05411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  m_GuideSystem: {fileID: 0}
   m_ActionManager: {fileID: 0}
   m_MoveSpeed: 4
   m_JumpForce: 7
+  m_GroundCheckDistance: 0.9
+  m_GroundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   m_Rigidbody: {fileID: 4112037420146739326}
-  m_InteractionRange: 10
+  m_InteractionRange: 0.9
   m_InteractiveLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  m_Anim: {fileID: 0}
