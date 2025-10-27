@@ -1,9 +1,5 @@
-
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Collections.LowLevel.Unsafe;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlatformMovementScript : MonoBehaviour
@@ -14,21 +10,37 @@ public class PlatformMovementScript : MonoBehaviour
 
     public bool IsGizmoView;
     private int index;
+
     private void Start()
     {
         CheckIfNodesEmpty();
         int side = nodes.Count; // No. of nodes
         int index = 0;
         platform.position = nodes[index].position;
-        index ++ ;
-    }
+        index++;
 
-//  If node is empty Create one
+   }
+
+    //  If node is empty Create one
     private void CheckIfNodesEmpty()
     {
         if (nodes.Count < 1)
             this.enabled = false;
     }
+
+    public void StartMoving()
+    {
+        ResetPlatform();
+    }
+
+    private void ResetPlatform()
+    {
+        int side = nodes.Count; // No. of nodes
+        int index = 0;
+        platform.localPosition = nodes[index].localPosition;
+        index++;
+    }
+
 
     void Update()
     {
@@ -41,6 +53,7 @@ public class PlatformMovementScript : MonoBehaviour
 //  Move Platform Based on Node Positions
     public void NodeBasedMovement()
     {
+
         Vector3 platformPosition = platform.position;
         if(platformPosition == nodes[index].position)
         {
