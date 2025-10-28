@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformMovementScript : MonoBehaviour
+public class PathMovementScript : MonoBehaviour
 {
     [SerializeField] private Transform platform;
     [SerializeField] private float moveSpeed;
@@ -94,10 +94,11 @@ public class PlatformMovementScript : MonoBehaviour
         newNode.gameObject.SetActive(true);
     }
 
-//  Delete the last node
+    //  Delete the last node
+    [ContextMenu("Generate Node")]
     public void DeleteNode()
     {
-        Transform lastNode = nodes[nodes.Count-1];
+        Transform lastNode = nodes[nodes.Count - 1];
         nodes.Remove(lastNode);
         DestroyImmediate(lastNode.gameObject);
     }

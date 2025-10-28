@@ -1,7 +1,5 @@
-using System;
+using Ekalaivan.Persistant;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -61,6 +59,7 @@ public class GameManager : MonoBehaviour
     internal void GameWin()
     {
         m_UiManagerRef.GameOver(true);
+        PersistantServiceLocator.Instance.LevelManagerRef.UpdateLevelData(true);
     }
 
     internal void GameOver()
@@ -70,11 +69,11 @@ public class GameManager : MonoBehaviour
 
     public void ReloadLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PersistantServiceLocator.Instance.SceneManagerRef.ReloadCurrentScene();
     }
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PersistantServiceLocator.Instance.SceneManagerRef.LoadNextScene();
     }
 }

@@ -178,3 +178,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fefbb8b55012667468551659dd587ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Key
+  Offset: 0.5
+  duration: 2

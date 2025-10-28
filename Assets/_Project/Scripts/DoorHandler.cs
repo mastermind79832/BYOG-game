@@ -1,4 +1,6 @@
+using DG.Tweening;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DoorHandler : MonoBehaviour
@@ -16,8 +18,13 @@ public class DoorHandler : MonoBehaviour
     {
         Lights.color = OpenColor;
 
-        DoorRight.transform.position += Vector3.right * Offset; 
-        DoorLeft.transform.position -= Vector3.right * Offset;
+        Lights.DOColor(OpenColor, 0.5f).SetEase(Ease.OutQuad);
+
+        // DoorRight.transform.position += Vector3.right * Offset;
+        // DoorLeft.transform.position -= Vector3.right * Offset;
+        
+        DoorRight.transform.DOMoveX(DoorRight.transform.position.x + Offset, 2f).SetEase(Ease.OutExpo);
+        DoorLeft.transform.DOMoveX(DoorLeft.transform.position.x - Offset, 2f).SetEase(Ease.OutExpo);
     }
 
 }

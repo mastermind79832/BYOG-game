@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 751704947b2846742ad632b9c0891307
+guid: d2f1b0ec1b395594dad25d28e834aa18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4093480436322176185
-    second: Shadow_0
+      213: 6147157293802429337
+    second: button back_0
   - first:
-      213: -6472874401326232
-    second: Shadow_1
+      213: 5668808583217830220
+    second: button back_1
+  - first:
+      213: 3962175538334538798
+    second: button back_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -49,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -142,13 +145,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shadow_0
+      name: button back_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 773
-        width: 1710
-        height: 241
+        x: 155
+        y: 215
+        width: 182
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bc8ef5c4c6fec830800000000000000
-      internalID: 4093480436322176185
+      spriteID: 99b9b8b5df61f4550800000000000000
+      internalID: 6147157293802429337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow_1
+      name: button back_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1710
-        height: 211
+        width: 199
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +182,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86b12ac74f009eff0800000000000000
-      internalID: -6472874401326232
+      spriteID: c49526e2f57abae40800000000000000
+      internalID: 5668808583217830220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button back_2
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 17
+        width: 193
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c1c2cd8a97cf630800000000000000
+      internalID: 3962175538334538798
       vertices: []
       indices: 
       edges: []
@@ -189,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -199,8 +224,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Shadow_0: 4093480436322176185
-      Shadow_1: -6472874401326232
+      button back_0: 6147157293802429337
+      button back_1: 5668808583217830220
+      button back_2: 3962175538334538798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
