@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [Header("Interactions")]
     [SerializeField] private float m_InteractionRange = 2f;
     [SerializeField] private LayerMask m_InteractiveLayerMask; 
-    private bool m_IsGamePlaying;
+    public bool m_IsGamePlaying;
     private float m_Timer;
     private float m_TimeInterval = 1f; // Time interval between actions in seconds
 
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.UIManagerRef.OnTimeUpdated(m_CurrentTimeIndex + m_Timer);
     }
 
-    private void EndTurn()
+    public void EndTurn()
     {
         m_IsGamePlaying = false;
         m_IsMovingLeft = false;

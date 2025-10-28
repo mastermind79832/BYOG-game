@@ -35,7 +35,13 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayClicked()
     {
+        if(PlayerControllerRef.m_IsGamePlaying)
+        {
+            PlayerControllerRef.EndTurn();
+            return;
+        }
         PlayerControllerRef.OnGamePlayStart();
+
     }
 
     public void PlayEnded()

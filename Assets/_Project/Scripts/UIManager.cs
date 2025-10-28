@@ -71,13 +71,13 @@ public class UIManager : MonoBehaviour
     private void LockUI()
     {
         m_PopupButton.interactable = false;
-        m_PlayButton.interactable = false;
+        //m_PlayButton.interactable = false;
     }
 
     public void UnlockUI()
     {
         m_PopupButton.interactable = true;
-        m_PlayButton.interactable = true;
+       // m_PlayButton.interactable = true;
     }
 
     public void ResetAll()

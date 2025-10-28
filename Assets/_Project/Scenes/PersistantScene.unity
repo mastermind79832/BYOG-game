@@ -665,6 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingSceneIndex: 1
+  isTesting: 0
 --- !u!4 &1138002761
 Transform:
   m_ObjectHideFlags: 0
