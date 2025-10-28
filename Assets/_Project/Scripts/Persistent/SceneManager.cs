@@ -9,11 +9,15 @@ namespace Ekalaivan.Persistant
 
 		[SerializeField] private int StartingSceneIndex;
 		private int CurrentIndex;
-		public int GetCurrentIndex() => CurrentIndex;	
+		public int GetCurrentIndex() => CurrentIndex;
 		//[SerializeField] private GameObject LoadingScreen;
+
+		public bool isTesting;
 
 		internal void StartService()
 		{
+			if (isTesting)
+				return;
 			MoveToNewScene(StartingSceneIndex);
 		}
 
