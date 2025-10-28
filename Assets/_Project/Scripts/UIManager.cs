@@ -82,8 +82,7 @@ public class UIManager : MonoBehaviour
 
     public void ResetAll()
     {
-        GameManager.Instance.ResetAll();
-        OnClearClicked();
+        GameManager.Instance.BackToMenu();
     }
 
     public void OnTimeUpdated(float time)

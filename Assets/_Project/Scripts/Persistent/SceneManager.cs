@@ -55,5 +55,10 @@ namespace Ekalaivan.Persistant
         {
             SwitchScene(CurrentIndex);
         }
+
+        internal void LoadFirstScene()
+        {
+			SwitchScene(StartingSceneIndex);
+        }
     }
 }

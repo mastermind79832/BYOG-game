@@ -1,3 +1,4 @@
+using System;
 using Ekalaivan.Persistant;
 using UnityEngine;
 
@@ -81,5 +82,10 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel()
     {
         PersistantServiceLocator.Instance.SceneManagerRef.LoadNextScene();
+    }
+
+    internal void BackToMenu()
+    {
+        PersistantServiceLocator.Instance.SceneManagerRef.LoadFirstScene();
     }
 }
