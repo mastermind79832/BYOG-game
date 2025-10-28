@@ -1251,7 +1251,7 @@ PrefabInstance:
     - {fileID: 8367222023472678774, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5579994784857007816, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 1567580614}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf1035369bfa4548a1baa8c031f871d, type: 3}
@@ -1380,7 +1380,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Order=[ FORWARD, FORWARD + JUMP,
 
-    FORWARD + FIST, FORWARD, FORWARD
+    FORWARD , FORWARD+ FIST, FORWARD
     ];'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5bfe7ea297dab89418e4793b1ac0ce8b, type: 2}
