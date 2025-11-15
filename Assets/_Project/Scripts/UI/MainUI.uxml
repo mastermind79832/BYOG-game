@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/USS/mainui.uss?fileID=7433441132597879392&amp;guid=32eef34582314de4c87d62f079ff580f&amp;type=3#mainui" />
+    <ui:VisualElement name="Action_Frame" class="action__frame">
+        <ui:VisualElement name="Action__Background" class="action__background" />
+        <ui:VisualElement name="Action_Item" class="action__item" />
+        <ui:VisualElement name="Action_Item" class="action__item" />
+        <ui:VisualElement name="Action_Item" class="action__item" />
+    </ui:VisualElement>
+</ui:UXML>
